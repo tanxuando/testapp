@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="TalklifeDb40cModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Talklife_Question">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PostType" Type="int" />
+          <Property Name="Title" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Content" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="CategoryId" Type="int" Nullable="false" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+          <Property Name="DeviceId" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="ViewCount" Type="int" Nullable="false" />
+          <Property Name="EncourageCount" Type="int" Nullable="false" />
+          <Property Name="LikeCount" Type="int" Nullable="false" />
+          <Property Name="NotLikeCount" Type="int" Nullable="false" />
+          <Property Name="IsAnonymous" Type="bit" Nullable="false" />
+          <Property Name="ComplainCount" Type="int" Nullable="false" />
+          <Property Name="NameMoodIcon" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsHelpful" Type="bit" />
+          <Property Name="AnswerCount" Type="int" />
+          <Property Name="flag" Type="bit" />
+          <Property Name="Picture" Type="nvarchar" MaxLength="255" />
+          <Property Name="GroupID" Type="int" />
+          <Property Name="IsTop" Type="bit" />
+          <Property Name="CreatedOnOrder" Type="datetime" />
+          <Property Name="ImagePath" Type="nvarchar" MaxLength="255" />
+          <Property Name="IsDeleted" Type="bit" />
+          <Property Name="HashTags" Type="nvarchar(max)" />
+          <Property Name="DeletedDate" Type="datetime" />
+          <Property Name="DeletedBy" Type="nvarchar" MaxLength="255" />
+          <Property Name="LocalTime" Type="datetimeoffset" Precision="7" />
+          <Property Name="NameMoodIconTemp" Type="bigint" />
+        </EntityType>
+        <EntityContainer Name="TalklifeDb40cModelStoreContainer">
+          <EntitySet Name="Talklife_Question" EntityType="Self.Talklife_Question" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TalklifeDb40cModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="TalklifeDb40cEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Talklife_Question" EntityType="TalklifeDb40cModel.Talklife_Question" />
+        </EntityContainer>
+        <EntityType Name="Talklife_Question">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PostType" Type="Int32" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Content" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CategoryId" Type="Int32" Nullable="false" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="DeviceId" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ViewCount" Type="Int32" Nullable="false" />
+          <Property Name="EncourageCount" Type="Int32" Nullable="false" />
+          <Property Name="LikeCount" Type="Int32" Nullable="false" />
+          <Property Name="NotLikeCount" Type="Int32" Nullable="false" />
+          <Property Name="IsAnonymous" Type="Boolean" Nullable="false" />
+          <Property Name="ComplainCount" Type="Int32" Nullable="false" />
+          <Property Name="NameMoodIcon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsHelpful" Type="Boolean" />
+          <Property Name="AnswerCount" Type="Int32" />
+          <Property Name="flag" Type="Boolean" />
+          <Property Name="Picture" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="GroupID" Type="Int32" />
+          <Property Name="IsTop" Type="Boolean" />
+          <Property Name="CreatedOnOrder" Type="DateTime" Precision="3" />
+          <Property Name="ImagePath" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="IsDeleted" Type="Boolean" />
+          <Property Name="HashTags" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+          <Property Name="DeletedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="LocalTime" Type="DateTimeOffset" Precision="7" />
+          <Property Name="NameMoodIconTemp" Type="Int64" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TalklifeDb40cModelStoreContainer" CdmEntityContainer="TalklifeDb40cEntities1">
+          <EntitySetMapping Name="Talklife_Question">
+            <EntityTypeMapping TypeName="TalklifeDb40cModel.Talklife_Question">
+              <MappingFragment StoreEntitySet="Talklife_Question">
+                <ScalarProperty Name="NameMoodIconTemp" ColumnName="NameMoodIconTemp" />
+                <ScalarProperty Name="LocalTime" ColumnName="LocalTime" />
+                <ScalarProperty Name="DeletedBy" ColumnName="DeletedBy" />
+                <ScalarProperty Name="DeletedDate" ColumnName="DeletedDate" />
+                <ScalarProperty Name="HashTags" ColumnName="HashTags" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+                <ScalarProperty Name="CreatedOnOrder" ColumnName="CreatedOnOrder" />
+                <ScalarProperty Name="IsTop" ColumnName="IsTop" />
+                <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+                <ScalarProperty Name="Picture" ColumnName="Picture" />
+                <ScalarProperty Name="flag" ColumnName="flag" />
+                <ScalarProperty Name="AnswerCount" ColumnName="AnswerCount" />
+                <ScalarProperty Name="IsHelpful" ColumnName="IsHelpful" />
+                <ScalarProperty Name="NameMoodIcon" ColumnName="NameMoodIcon" />
+                <ScalarProperty Name="ComplainCount" ColumnName="ComplainCount" />
+                <ScalarProperty Name="IsAnonymous" ColumnName="IsAnonymous" />
+                <ScalarProperty Name="NotLikeCount" ColumnName="NotLikeCount" />
+                <ScalarProperty Name="LikeCount" ColumnName="LikeCount" />
+                <ScalarProperty Name="EncourageCount" ColumnName="EncourageCount" />
+                <ScalarProperty Name="ViewCount" ColumnName="ViewCount" />
+                <ScalarProperty Name="DeviceId" ColumnName="DeviceId" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="PostType" ColumnName="PostType" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

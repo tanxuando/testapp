@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TalklifeDb40cModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Talklife_Question">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PostType" Type="int" />
+    <Property Name="Title" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Content" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CategoryId" Type="int" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="DeviceId" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="ViewCount" Type="int" Nullable="false" />
+    <Property Name="EncourageCount" Type="int" Nullable="false" />
+    <Property Name="LikeCount" Type="int" Nullable="false" />
+    <Property Name="NotLikeCount" Type="int" Nullable="false" />
+    <Property Name="IsAnonymous" Type="bit" Nullable="false" />
+    <Property Name="ComplainCount" Type="int" Nullable="false" />
+    <Property Name="NameMoodIcon" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsHelpful" Type="bit" />
+    <Property Name="AnswerCount" Type="int" />
+    <Property Name="flag" Type="bit" />
+    <Property Name="Picture" Type="nvarchar" MaxLength="255" />
+    <Property Name="GroupID" Type="int" />
+    <Property Name="IsTop" Type="bit" />
+    <Property Name="CreatedOnOrder" Type="datetime" />
+    <Property Name="ImagePath" Type="nvarchar" MaxLength="255" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="HashTags" Type="nvarchar(max)" />
+    <Property Name="DeletedDate" Type="datetime" />
+    <Property Name="DeletedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="LocalTime" Type="datetimeoffset" Precision="7" />
+    <Property Name="NameMoodIconTemp" Type="bigint" />
+  </EntityType>
+  <EntityContainer Name="TalklifeDb40cModelStoreContainer">
+    <EntitySet Name="Talklife_Question" EntityType="Self.Talklife_Question" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

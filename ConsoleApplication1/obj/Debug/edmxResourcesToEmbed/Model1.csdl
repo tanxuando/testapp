@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TalklifeDb40cModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="TalklifeDb40cEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Talklife_Question" EntityType="TalklifeDb40cModel.Talklife_Question" />
+  </EntityContainer>
+  <EntityType Name="Talklife_Question">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PostType" Type="Int32" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Content" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CategoryId" Type="Int32" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DeviceId" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ViewCount" Type="Int32" Nullable="false" />
+    <Property Name="EncourageCount" Type="Int32" Nullable="false" />
+    <Property Name="LikeCount" Type="Int32" Nullable="false" />
+    <Property Name="NotLikeCount" Type="Int32" Nullable="false" />
+    <Property Name="IsAnonymous" Type="Boolean" Nullable="false" />
+    <Property Name="ComplainCount" Type="Int32" Nullable="false" />
+    <Property Name="NameMoodIcon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsHelpful" Type="Boolean" />
+    <Property Name="AnswerCount" Type="Int32" />
+    <Property Name="flag" Type="Boolean" />
+    <Property Name="Picture" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="GroupID" Type="Int32" />
+    <Property Name="IsTop" Type="Boolean" />
+    <Property Name="CreatedOnOrder" Type="DateTime" Precision="3" />
+    <Property Name="ImagePath" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="HashTags" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="LocalTime" Type="DateTimeOffset" Precision="7" />
+    <Property Name="NameMoodIconTemp" Type="Int64" />
+  </EntityType>
+</Schema>

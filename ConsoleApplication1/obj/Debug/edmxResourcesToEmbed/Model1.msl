@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TalklifeDb40cModelStoreContainer" CdmEntityContainer="TalklifeDb40cEntities1">
+    <EntitySetMapping Name="Talklife_Question">
+      <EntityTypeMapping TypeName="TalklifeDb40cModel.Talklife_Question">
+        <MappingFragment StoreEntitySet="Talklife_Question">
+          <ScalarProperty Name="NameMoodIconTemp" ColumnName="NameMoodIconTemp" />
+          <ScalarProperty Name="LocalTime" ColumnName="LocalTime" />
+          <ScalarProperty Name="DeletedBy" ColumnName="DeletedBy" />
+          <ScalarProperty Name="DeletedDate" ColumnName="DeletedDate" />
+          <ScalarProperty Name="HashTags" ColumnName="HashTags" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+          <ScalarProperty Name="CreatedOnOrder" ColumnName="CreatedOnOrder" />
+          <ScalarProperty Name="IsTop" ColumnName="IsTop" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="flag" ColumnName="flag" />
+          <ScalarProperty Name="AnswerCount" ColumnName="AnswerCount" />
+          <ScalarProperty Name="IsHelpful" ColumnName="IsHelpful" />
+          <ScalarProperty Name="NameMoodIcon" ColumnName="NameMoodIcon" />
+          <ScalarProperty Name="ComplainCount" ColumnName="ComplainCount" />
+          <ScalarProperty Name="IsAnonymous" ColumnName="IsAnonymous" />
+          <ScalarProperty Name="NotLikeCount" ColumnName="NotLikeCount" />
+          <ScalarProperty Name="LikeCount" ColumnName="LikeCount" />
+          <ScalarProperty Name="EncourageCount" ColumnName="EncourageCount" />
+          <ScalarProperty Name="ViewCount" ColumnName="ViewCount" />
+          <ScalarProperty Name="DeviceId" ColumnName="DeviceId" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="PostType" ColumnName="PostType" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
